@@ -1,0 +1,94 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/city-buildings.png";
+import underline from "assets/undraw_fun-underline.svg";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <div class="relative">
+      <h1
+        class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+        Soluciones e innovación urbana con IA
+      </h1>
+      <svg
+        viewBox="0 0 202.819 45.163"
+        class="hero__underline hidden md:block absolute w-1/4 left-1/2 transform -translate-x-1/2 md:bottom-0 lg:bottom-auto lg:w-1/3 lg:left-1/4"
+        ><path
+          d="M2.12 9.857L156.9 5.515l43.806-1.229V0a749.549 749.549 0 00-114.1 22.4 2.146 2.146 0 00.584 4.209 109.73 109.73 0 0133.39 5.281v-4.129l-30 9.532a2.146 2.146 0 000 4.132 96.378 96.378 0 0022.862 3.736c2.827.118 2.821-4.167 0-4.285a91.282 91.282 0 01-21.694-3.583v4.132l30-9.532a2.147 2.147 0 000-4.132 113.829 113.829 0 00-34.558-5.434l.584 4.209a742.128 742.128 0 01112.935-22.25c2.726-.318 2.9-4.367 0-4.285L45.927 4.343 2.12 5.572c-2.821.079-2.833 4.365 0 4.285z"
+          fill="#6c63ff"></path></svg
+      >
+    </div>
+    <p class="text-lg text-slate-600 max-w-xl mt-20">
+      En Maizlabs realizamos investigación para el uso de inteligencia
+      artificial en ciudades emergentes y asi cerrar brechas sociales <wbr /> y mejorar
+      la calidad de vida en países en desarrollo y ciudades emergentes
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+
+        Explora nuestras soluciones
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/surjithctly/astroship"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        Participa hoy
+      </Link>
+    </div>
+  </div>
+</main>
+<style>
+  /* .hero__underline {
+    position: absolute;
+    display: none;
+    animation-name: stretch;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+
+  @media (min-width: 600px) {
+    .hero__underline {
+      display: block;
+      top: 365px;
+      left: 15%;
+      height: 40px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .hero__underline {
+      display: block;
+      top: 365px;
+      left: 26%;
+      height: 44px;
+    }
+  } */
+</style>
