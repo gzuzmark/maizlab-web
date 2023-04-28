@@ -1,0 +1,42 @@
+---
+import Link from "./ui/link.astro";
+---
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <h2
+      class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">
+      Descubre Rene: Innovación en Reglamentos de Edificaciones
+    </h2>
+    <div class="md:w-3/5 md:pl-6">
+      <p class="leading-relaxed text-base">
+        Conoce Rene Chat, una herramienta diseñada por Maizlab que simplifica el
+        proceso de consulta y análisis de reglamentos urbanísticos, permitiendo
+        a profesionales y usuarios acceder a información actualizada y
+        confiable.
+      </p>
+      <div class="flex md:mt-4 mt-6">
+        <Link
+          href="https://rene.maizlab.com"
+          target="_blank"
+          class="flex gap-1 items-center justify-center"
+          rel="noopener">
+          Prueba Rene
+        </Link>
+        <a class="text-black inline-flex items-center ml-4"
+          >Más información
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-2"
+            viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

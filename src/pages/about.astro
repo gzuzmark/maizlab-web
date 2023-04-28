@@ -14,21 +14,27 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Nosotros</Fragment>
+      <Fragment slot="desc">
+        Somos un equipo reducido, pero lleno de pasión y dedicación.
+      </Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
+      <h2 class="font-bold text-3xl text-gray-800">Fortaleciendo ciudades.</h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        Somos un equipo recién formado y diverso, unidos por la pasión de
+        mejorar la vida de las personas en ciudades emergentes. Nuestros
+        miembros provienen de distintos orígenes culturales, lo que nos permite
+        combinar habilidades, experiencias y enfoques únicos para enfrentar los
+        desafíos que presentan estas urbes en crecimiento. A pesar de ser un
+        equipo nuevo, estamos comprometidos con el aprendizaje continuo y la
+        colaboración efectiva para lograr un impacto positivo y duradero en las
+        comunidades a las que servimos.
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <div
+      class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12 place-items-center">
       {
         publishedTeamMembers.map((teamMemberEntry) => (
           <div class="group">
@@ -47,9 +53,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
             </div>
 
             <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">
-                {teamMemberEntry.data.name}
-              </h2>
+              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
               <h3 class="text-sm text-slate-500">
                 {teamMemberEntry.data.title}
               </h3>

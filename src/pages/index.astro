@@ -1,18 +1,26 @@
 ---
 import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
+import Features1 from "@components/features-1.astro";
 import Features from "@components/features.astro";
 import Footer from "@components/footer.astro";
 import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+import "../styles/Theme.css";
+import Features2 from "@components/features-2.astro";
+import Testimonial from "@components/testimonial.astro";
+import SingleFeature from "@components/singlefeature.astro";
 ---
 
 <Layout title="">
   <Container>
     <Hero />
     <Features />
-    <Logos />
+    <SingleFeature />
+    <Features1 />
+    <Features2 />
+    <Testimonial />
     <Cta />
   </Container>
 </Layout>

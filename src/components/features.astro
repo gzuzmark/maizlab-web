@@ -4,46 +4,52 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Vivienda m.orada",
+    title: "Vivienda | m.orada",
     description:
-      "Abordar la problemática de la vivienda digna, desde una perspectiva colectiva.",
+      "Resolver la problemática de la vivienda digna en comunidades emergentes y países en desarrollo con soluciones colectivas y herramientas de inteligencia artificial",
     icon: "bx:bxs-building-house",
   },
   {
-    title: "M.jora de servicios",
+    title: "Servicios | m.jora",
     description:
-      "Impulsar y acelerar el acceso universal a servicios básicos mediante el uso de soluciones tecnológicas y digitales.",
+      "Acelerar el acceso universal a servicios básicos con soluciones tecnológicas y digitales, mejorando la calidad de vida en áreas en desarrollo.",
     icon: "bx:bxs-server",
   },
   {
-    title: "Equipamiento de espacios",
+    title: "Equipamiento | can.cha",
     description:
-      "Mejorar la experiencia y uso del mobiliario y espacio urbano mediante el uso de Big Data y plantear nuevas soluciones de materiales, manejo y supervisión.",
+      "Transformar la experiencia y uso del mobiliario y espacio urbano con Big Data y soluciones innovadoras de materiales, manejo y supervisión",
     icon: "bx:bxs-bolt-circle",
   },
   {
-    title: "Seguridad para todos pan.ca",
+    title: "Seguridad | pan.ca",
     description:
-      "Aplicar herramientas digitales para mejorar el monitoreo, la integración entre sistemas y la alerta temprana en la seguridad urbana.",
+      "Repensar la seguridad urbana con herramientas digitales avanzadas para monitorear, integrar y alertar en tiempo real para prevenir delitos y violencia en áreas urbanas",
     icon: "bx:bxs-webcam",
   },
   {
-    title: "Movilidad mo.te",
+    title: "Movilidad | mo.te",
     description:
-      "Buscar mejorar la experiencia en las circulaciones en pendientes y cerros (escaleras), uso de transporte público y accesibilidad a la ciudad para personas con movilidad reducida.",
+      "Mejorar la movilidad urbana en una experiencia accesible y eficiente para todos, mediante soluciones tecnológicas innovadoras que incluyen el transporte público y la accesibilidad de espacios urbanos ",
     icon: "bx:bxs-car-crash",
   },
   {
-    title: "Financiamiento e.lote",
+    title: "Financiamiento | e.lote",
     description:
-      "Acceso a financiamiento formal y/o no tradicional, mediante regularización y puesta en valor de la propiedad usando herramientas digitales como blockchain y Smart contracts.",
+      "Lograr el acceso a financiamiento formal y no tradicional, con regularización y valorización de la propiedad a través de herramientas digitales innovadoras como blockchain y 'Smart contracts'",
+    icon: "bx:bxl-codepen",
+  },
+  {
+    title: "Conectividad | co.rn",
+    description:
+      "Conectar ciudades con el mundo digital, ofreciendo acceso universal y equitativo a internet y tecnologías avanzadas, para acelerar el progreso y reducir la desigualdad en comunidades emergentes",
     icon: "bx:bxl-codepen",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+  <h2 class="text-3xl lg:text-4xl font-bold lg:tracking-tight">
     Nuestras líneas de investigación
   </h2>
   <p class="text-lg mt-4 text-slate-600">
@@ -52,10 +58,10 @@ const features = [
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid grid-container sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
+      <div class="child-element flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
@@ -67,3 +73,9 @@ const features = [
     ))
   }
 </div>
+
+<style>
+  .grid-container .child-element:last-child:nth-child(7) {
+    @apply col-start-2;
+  }
+</style>
