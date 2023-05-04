@@ -17,9 +17,7 @@ const resolvedImageWithDomain = new URL(
 
 const { title } = Astro.props;
 
-const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+const makeTitle = title ? title + " | " + "Maizlab" : "Maizlab";
 ---
 
 <!DOCTYPE html>
@@ -33,22 +31,22 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Maizlab es una agencia que busca aplicar tencologias de inteligencia artificial en el desarrollo de ciudades emergentes"
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@_Gzvz_",
+        site: "https://www.jesudev.com/",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Maizlab website`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Maizlab Homepage Screenshot",
         },
       }}
     />
@@ -64,8 +62,9 @@ const makeTitle = title
         content-visibility: auto;
       }
     </style>
-  </body><script>
-    import AOS from "aos";
-    AOS.init();
-  </script>
+    <script>
+      import AOS from "aos";
+      AOS.init();
+    </script>
+  </body>
 </html>
