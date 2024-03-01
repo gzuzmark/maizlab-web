@@ -5,6 +5,7 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Picture } from "@astrojs/image/components";
 import logo from "assets/maizlab_logo.png";
+import maizlabName from "assets/maizlab logo.svg"
 
 const menuitems = [
   // {
@@ -40,10 +41,9 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg">
-          <span class="font-bold text-slate-800">Maiz</span><span
-            class="text-slate-500">lab</span
-          >
+        <a href="/">
+          <img src={maizlabName} alt="Maizlab Name" class="w-36 h-auto">
+          
           <!-- <Picture
             src={logo}
             alt="maizlabs logo"
@@ -97,7 +97,7 @@ const menuitems = [
           target="_blank"
           rel="noopener"
           size="md">
-          Prueba Rene
+          Prueba ReNE
         </Link>
       </div>
     </div>
